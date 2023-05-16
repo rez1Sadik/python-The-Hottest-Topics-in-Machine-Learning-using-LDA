@@ -107,21 +107,6 @@ papers.head()
 
 
 
-```python
-%%nose
-
-import pandas as pd
-
-def test_papers_exists():
-    assert "papers" in globals(), \
-        "The variable papers should be defined."
-        
-def test_papers_correctly_loaded():
-    correct_papers = pd.read_csv("datasets/papers.csv")
-    assert correct_papers.equals(papers), "The variable papers should contain the data in papers.csv"
-```
-
-
 
 
 
@@ -215,19 +200,6 @@ papers.head()
 
 
 
-```python
-%%nose
-
-import pandas as pd
-
-def test_papers_exists():
-    assert "papers" in globals(), \
-        "The variable `papers` should be defined."
-        
-def test_papers_columns():
-    assert papers.columns.size==4, \
-        "The variable `papers` does not contain the right amount of columns."
-```
 
 
 
@@ -272,26 +244,6 @@ plt.show()
 ![png](images/output_7_0.png)
 
 
-
-```python
-%%nose
-
-# one or more tests of the students code. 
-# The @solution should pass the tests.
-# The purpose of the tests is to try to catch common errors and to 
-# give the student a hint on how to resolve these errors.
-
-def test_vars_exists():
-    assert "groups" in globals(), \
-        "The variable groups should be defined."
-    assert "counts" in globals(), \
-        "The variable counts should be defined."
-        
-def test_vars_columns():
-    correct_groups = papers.groupby('year')
-    correct_counts = correct_groups.size()
-    assert correct_counts.equals(counts), "The variable counts is not correctly defined."
-```
 
 
 
@@ -339,24 +291,6 @@ print(papers['title_processed'].head())
 
 
 
-```python
-%%nose
-
-# one or more tests of the students code. 
-# The @solution should pass the tests.
-# The purpose of the tests is to try to catch common errors and to 
-# give the student a hint on how to resolve these errors.
-
-def test_processed_title_column():
-    tmp = papers['title'].map(lambda x: re.sub('[,\.!?]', '', x))
-    # Convert the titles to lowercase
-    tmp = tmp.map(lambda x: x.lower())
-    tmp.name = 'title_processed'
-    assert tmp.equals(papers['title_processed']), "The column of processed titles is not correctly defined."
-```
-
-
-
 
 
 
@@ -392,21 +326,6 @@ wordcloud.to_image()
 
 ![png](images/output_13_0.png)
 
-
-
-
-```python
-%%nose
-
-# one or more tests of the students code. 
-# The @solution should pass the tests.
-# The purpose of the tests is to try to catch common errors and to 
-# give the student a hint on how to resolve these errors.
-
-def test_example():
-    assert long_string == ' '.join(papers['title_processed']), \
-    'The titles were not parsed correctly to a single long string.'
-```
 
 
 
@@ -462,23 +381,6 @@ plot_10_most_common_words(count_data, count_vectorizer)
 
 
 ![png](images/output_16_0.png)
-
-
-
-```python
-%%nose
-
-# one or more tests of the students code. 
-# The @solution should pass the tests.
-# The purpose of the tests is to try to catch common errors and to 
-# give the student a hint on how to resolve these errors.
-
-def test_count_data():
-    assert "count_data" in globals(), \
-        "The variable count_data should be defined."
-```
-
-
 
 
 
@@ -549,19 +451,6 @@ print_topics(lda, count_vectorizer, number_words)
 
 
 
-```python
-%%nose
-
-# No standard testing procedure exists for printing at the moment
-
-def test_nothing():
-    assert True, "Nothing to test"
-```
-
-
-
-
-
 
 
 
@@ -578,19 +467,6 @@ def test_nothing():
 more_papers_published_in_2018 = True
 ```
 
-
-```python
-%%nose
-
-# one or more tests of the students code. 
-# The @solution should pass the tests.
-# The purpose of the tests is to try to catch common errors and to 
-# give the student a hint on how to resolve these errors.
-
-def test():
-        assert more_papers_published_in_2018 == True, \
-    'The number published papers has been rising the past 10 years!'
-```
 
 
 
