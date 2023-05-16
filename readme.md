@@ -126,7 +126,7 @@ def test_papers_correctly_loaded():
 
 
 
-    2/2 tests passed
+   
 
 
 
@@ -234,7 +234,7 @@ def test_papers_columns():
 
 
 
-    2/2 tests passed
+ 
 
 
 
@@ -298,7 +298,7 @@ def test_vars_columns():
 
 
 
-    2/2 tests passed
+
 
 
 
@@ -360,7 +360,7 @@ def test_processed_title_column():
 
 
 
-    1/1 tests passed
+    
 
 
 
@@ -413,7 +413,7 @@ def test_example():
 
 
 
-    1/1 tests passed
+
 
 
 
@@ -483,7 +483,7 @@ def test_count_data():
 
 
 
-    1/1 tests passed
+
 
 
 
@@ -563,7 +563,7 @@ def test_nothing():
 
 
 
-    1/1 tests passed
+
 
 
 
@@ -594,10 +594,6 @@ def test():
 
 
 
-
-
-
-    1/1 tests passed
 
 
 
